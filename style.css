@@ -1,0 +1,274 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007BFF;
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FFD700;
+}
+
+/* Home Section */
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.home-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.home-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.home-text .tagline {
+    display: inline-block;
+    background-color: #E0F0FF;
+    color: #007BFF;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.home-text h2 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.home-text h2 span {
+    color: #007BFF;
+}
+
+.home-text p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.buttons .btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.buttons .primary {
+    background-color: #007BFF;
+    color: white;
+    margin-right: 1rem;
+}
+
+.buttons .primary:hover {
+    background-color: #0056b3;
+}
+
+.buttons .secondary {
+    border: 2px solid #007BFF;
+    color: #007BFF;
+}
+
+.buttons .secondary:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* About Section */
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.about-images img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text h3 {
+    color: #007BFF;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.accordion {
+    background-color: #E0F0FF;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.accordion:hover {
+    background-color: #D0E8FF;
+}
+
+.accordion-content {
+    display: none;
+    padding: 0.5rem 1rem;
+    border-top: 1px solid #ccc;
+}
+
+.accordion.active + .accordion-content {
+    display: block;
+}
+
+.accordion i {
+    float: right;
+    transition: transform 0.3s;
+}
+
+.accordion.active i {
+    transform: rotate(180deg);
+}
+
+/* Services Section */
+.services-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.section-subtitle {
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: #007BFF;
+}
+
+.service-card p {
+    padding: 0 1rem 1rem;
+    color: #555;
+}
+
+.service-card .btn {
+    display: block;
+    margin: 1rem;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+
+    .home-section {
+        flex-direction: column;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
